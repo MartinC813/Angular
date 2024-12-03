@@ -1,0 +1,58 @@
+.login-container{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.form-group{
+    margin-bottom: 1em;
+}
+label{
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #333;
+}
+input{
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+button{
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+button:disabled{
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled){
+    background-color: #0056b3;
+}
+
+.error{
+    color: red;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
+
+input:focus{
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
