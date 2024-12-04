@@ -1,6 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
+//es el archivo de las pruebas unitarias para este componente, en este caso el principal de la app. Se genera automaticmaente por angular CLI. 
+
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({

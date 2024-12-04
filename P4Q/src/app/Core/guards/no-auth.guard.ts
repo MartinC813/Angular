@@ -6,6 +6,7 @@ import { AuthService } from '../../Core/services/auth.service';
   providedIn: 'root',
 })
 
+//Cuando llamo a este CanActivate es para poder mandarlo al login, si esta logged no deberia poder entrar al mismo. Todas las rutas menos el login pasan por aca
 export class NoAuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
 

@@ -5,6 +5,7 @@ import { AuthService } from '../services/auth.service'; // Servicio de autentica
 @Injectable({
   providedIn: 'root',
 })
+//Este canActivate se llama cuando un usuario no logeado quiere entrar a una ruta que necesita log.
 export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
 
