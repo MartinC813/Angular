@@ -25,6 +25,11 @@ export class AuthService {
     return of(false); 
   }
 
+  register(name: string, email: string, password: string): Observable<boolean> {
+    // Aquí iría la lógica para laburar con la API
+    return of(true); 
+  }
+
 
   isLoggedIn(): boolean {
     return this.loggedIn;

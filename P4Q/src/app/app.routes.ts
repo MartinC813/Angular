@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './Features/auth/login/login.component';
+import { RegisterComponent } from './Features/auth/register/register.component';
 //import { AuthGuard } from './Core/guards/auth.guard';
 //import { NoAuthGuard } from './Core/guards/no-auth.guard';
 
@@ -9,6 +10,12 @@ export const routes: Routes = [
     component: LoginComponent,
     //canActivate: [NoAuthGuard], // Si está logueado, redirige al dashboard
   },
+  {
+    path: 'register',
+    component: RegisterComponent
+    //canActivate: [NoAuthGuard],
+  },
+  
   /*{
     path: 'dashboard',
     component: DashboardComponent,
