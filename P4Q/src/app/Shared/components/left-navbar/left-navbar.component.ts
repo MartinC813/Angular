@@ -1,14 +1,25 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-search-bar',
-  templateUrl: './search-bar.component.html',
-  styleUrls: ['./search-bar.component.css']
+  selector: 'app-left-navbar',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './left-navbar.component.html',
+  styleUrls: ['./left-navbar.component.css']
 })
-export class SearchBarComponent {
+export class LeftNavbarComponent {
   searchText: string = '';
+
+  constructor(private router: Router) {}
 
   onSearch() {
     console.log('Searching for:', this.searchText);
+  }
+
+  onLogout() {
+    console.log('Logging out');
+    this.router.navigate(['/login']); 
   }
 }
