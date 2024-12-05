@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalTicketComponent } from './search-bar.component';
+import { LeftNavbarComponent } from './left-navbar.component';
 
-describe('ModalTicketComponent', () => {
-  let component: ModalTicketComponent;
-  let fixture: ComponentFixture<ModalTicketComponent>;
+describe('LeftNavbarComponent', () => {
+  let component: LeftNavbarComponent;
+  let fixture: ComponentFixture<LeftNavbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ModalTicketComponent]
+      declarations: [LeftNavbarComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ModalTicketComponent);
+    fixture = TestBed.createComponent(LeftNavbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
