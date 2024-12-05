@@ -3,15 +3,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../../Core/services/auth.service';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { Injectable } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { LeftNavbarComponent } from '../../../Shared/components/left-navbar/left-navbar.component';
 
 @Component({
   selector: 'app-login',
-  standalone: true,                             // Define el componente como standalone
-  imports: [ReactiveFormsModule, CommonModule], // Importa los módulos que necesita. Como es standalone puede importarlos asi, si fuera module ahi cambia la cosa.
+  standalone: true,
+  imports: [ReactiveFormsModule, CommonModule, LeftNavbarComponent], 
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
@@ -20,27 +18,28 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private authService: AuthService, //Constructor tipico
+    private authService: AuthService,
     private router: Router
   ) {}
 
-  ngOnInit(): void { //Validas el formulario
+  ngOnInit(): void {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
   }
 
-  onSubmit(): void { //Valida el form y lo pasa por el AuthService 
+  onSubmit(): void {
     if (this.loginForm.valid) {
       const { email, password } = this.loginForm.value;
       this.authService.login(email, password).subscribe({
-        next: () => this.router.navigate(['/dashboard']), // Redirigir después del login
+        next: () => this.router.navigate(['/dashboard']),
         error: () => console.error('Error en el login'),
       });
     }
   }
-  onClickRegister(): void{
-    this.router.navigate(['/register'])
+
+  onClickRegister(): void {
+    this.router.navigate(['/register']);
   }
 }
