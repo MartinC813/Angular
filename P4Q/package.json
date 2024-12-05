@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development", 
+    "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:P4Q": "node dist/p4-q/server/server.mjs"
   },
@@ -22,6 +22,7 @@
     "@angular/router": "^19.0.0",
     "@angular/ssr": "^19.0.2",
     "express": "^4.18.2",
+    "p4-q": "file:",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
